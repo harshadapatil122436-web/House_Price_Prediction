@@ -1,0 +1,10 @@
+$kind: http-request
+name: Get Location Names
+method: GET
+url: '{{base_url}}/get_location_names'
+order: 1000
+description: |-
+  Retrieves the list of all available location names supported by the House Price Prediction model.
+
+  **Response:**
+  Returns a JSON object with a `locations` array containing all valid location names that can be used in the `/predict_home_price` endpoint.

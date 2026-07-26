@@ -1,0 +1,5 @@
+$kind: http-request
+method: GET
+url: '{{base_url}}/get_location_names'
+order: 1000
+description: Returns a list of all available location names for house price prediction.

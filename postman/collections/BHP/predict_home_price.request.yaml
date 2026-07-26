@@ -1,0 +1,35 @@
+$kind: http-request
+name: Predict Home Price
+method: POST
+url: '{{base_url}}/predict_home_price'
+order: 2000
+description: |-
+  Predicts the estimated home price based on the provided property details.
+
+  **Form Fields:**
+  - `total_sqft` (float) — Total area of the property in square feet
+  - `location_name` (string) — Location of the property (use `/get_location_names` to get valid values)
+  - `bhk_price` (integer) — Number of BHK (Bedroom, Hall, Kitchen)
+  - `bath_price` (integer) — Number of bathrooms
+
+  **Response:**
+  Returns a JSON object with `estimated_price` field containing the predicted price.
+body:
+  type: formdata
+  content:
+    - key: total_sqft
+      type: text
+      value: '1000'
+      description: Total area in square feet
+    - key: location_name
+      type: text
+      value: 'indira nagar'
+      description: Location name (get valid values from /get_location_names)
+    - key: bhk_price
+      type: text
+      value: '2'
+      description: Number of BHK
+    - key: bath_price
+      type: text
+      value: '2'
+      description: Number of bathrooms

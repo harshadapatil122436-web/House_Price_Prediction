@@ -1,0 +1,20 @@
+$kind: http-request
+method: POST
+url: '{{base_url}}/predict_home_price'
+order: 2000
+description: Predicts the estimated home price based on the given inputs.
+body:
+  type: formdata
+  content:
+    - key: total_sqft
+      type: text
+      value: '1000'
+    - key: location_name
+      type: text
+      value: '1st Phase JP Nagar'
+    - key: bhk_price
+      type: text
+      value: '2'
+    - key: bath_price
+      type: text
+      value: '2'

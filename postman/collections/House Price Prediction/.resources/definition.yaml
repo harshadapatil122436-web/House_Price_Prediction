@@ -1,0 +1,5 @@
+$kind: collection
+name: House Price Prediction API
+variables:
+  - key: base_url
+    value: 'http://127.0.0.1:5000'
