@@ -1,4 +1,4 @@
-const API_BASE = 'http://127.0.0.1:5000';
+const API_BASE = 'https://house-price-prediction-84hh.onrender.com';
 
 const locationSelect = document.getElementById('location');
 const statusLine = document.getElementById('status-line');
